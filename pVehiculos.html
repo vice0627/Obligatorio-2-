@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Beyond Reality Motors</title>
+
+    <script src="https://kit.fontawesome.com/41bcea2ae3.js" crossorigin="anonymous"></script>
+
+    <link rel="stylesheet" href="css/estilos.css">
+</head>
+
+<body>
+
+    <header>
+
+        <div class="container__menu">
+            <div class="logo">
+                <img src="images/logo-magtimus-v2.3-1.png" alt="">
+            </div>
+            <div class="menu">
+                <i class="fas fa-bars" id="btn_menu"></i>
+                <div id="back_menu"></div>
+                <nav id="nav">
+                    <img src="images/logo-magtimus-v2.3-1.png" alt="">
+                    <ul>
+                        <li><a href="index.html">Inicio</a></li>
+                        <li><a href="pVehiculos.html"id="selected">vehiculos</a></li>
+                        <li><a href="pVendedores.html">vendedores</a></li>
+                        <li><a href="pClientes.html">clientes</a></li>
+                        <li><a href="pVentas.html">ventas</a></li>
+                        <li><a href="pEstadisticas.html">estadisticas</a></li>
+                    </ul>
+                </nav>
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <div class="container__cover">
+            <div class="cover">
+
+                <div class="text">
+
+                    <h1>Ingreso de vehículos a la base de datos</h1>
+
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Iure voluptates
+                     iusto velit dicta nulla nostrum quidem neque. Asperiores earum veniam nisi nobis et officia odit minima illum perferendis placeat! Ullam
+                    </p>
+
+                    <a href="pExtraInfo.html">
+                        <input type="button" value="Leer Más">
+                    </a>
+
+                </div>
+                <div id="ingreso">
+          
+                   <h1>vehículos</h1>
+                   <br><br>
+    <hr>
+    <p>Marca:     <input class="barras" id="Marca"></p>
+    <p>Modelo: <input class="barras" id="Modelo"></p>
+    <p>Anio: <input class="barras" id="anio"></p>
+    <p>Precio: <input class="barras" id="precio"></p>
+    <p>Stock: <input class="barras" id="precio"></p>
+    <input name="modificado" type="checkbox" />Modificado
+    <input name="nuevo" type="checkbox" />Nuevo
+    <hr>
+    <p><select size="6" onclick="articulo.seleccionar()" id="listaArticulos" class="lista"></select></p>    
+                </div>
+                <div id="botones">
+
+                    <div  id="alta">
+                        <input type="button" class="boton" value="Alta" id="vehiculos-alta" onclick="objVehiculos.alta()">
+                    </div>
+                    <div id="baja">
+                        <input type="button" class="boton" value="Baja" id="vehiculos-baja" onclick="objVehiculos.baja()">
+                    </div>
+                    <div id="modificar">
+                        <input type="button" class="boton" value="modificar" id="modificar" onclick="objVehiculos.modificar()">
+                    </div>
+                    <div id="reset">
+                        <input type="button" class="boton" value="reset" id="reset" onclick="objVehiculos.reset()">
+                    </div>
+                    
+                </div>
+
+            </div>
+        </div>
+        </div>
+        </div>
+    </main>
+
+    <script src="js/objVehiculos.js"></script>
+</body>
+
+</html>

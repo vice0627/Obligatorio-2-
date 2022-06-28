@@ -1,0 +1,41 @@
+<!doctype html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <title>ABM prueba</title>
+    <script src="js/memoria.js"></script>
+    <script src="js/objVendedores.js"></script>
+</head>
+
+<body onload="vendedor.inicializar()">
+<center>
+<fieldset>
+    <header>
+        "prueba"
+    </header>
+
+    <form id="abmEspecialidad">
+        <h1>ABM vendedor prueba</h1>
+        <section>
+            <div class="campos">
+                <label>Id</label><input id="vendedor-id">
+                <label>Nombre</label><input id="vendedor-nombre">
+                <label>Edad</label><input id="vendedor-edad">
+                <label>Salario</label><input id="vendedor-salario">
+            </div>
+            <div class="botones">
+                <input type="button" id="vendedor-alta" onclick="vendedor.alta()" value="Alta">
+                <input type="button" id="vendedor-baja" onclick="vendedor.baja()" value="Baja">
+                <input type="button" id="vendedor-modificar" onclick="vendedor.modificar()" value="Modificar">
+                <input type="reset">
+            </div>
+            <div class="lista">
+                <select id="vendedor-lista" size="4" onclick="vendedor.seleccionar()"></select>
+            </div>
+        </section>
+    </form>
+	
+</fieldset></center>
+</body>
+</html>

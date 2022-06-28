@@ -1,0 +1,41 @@
+<!doctype html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <title>ABM prueba</title>
+    <script src="js/memoria.js"></script>
+    <script src="js/objClientes.js"></script>
+</head>
+
+<body onload="cliente.inicializar()">
+<center>
+<fieldset>
+    <header>
+        "prueba"
+    </header>
+
+    <form id="abmEspecialidad">
+        <h1>ABM Cliente prueba</h1>
+        <section>
+            <div class="campos">
+                <label>Id</label><input id="cliente-id">
+                <label>Nombre</label><input id="cliente-nombre">
+                <label>Edad</label><input id="cliente-edad">
+                <label>Localidad</label><input id="cliente-localidad">
+            </div>
+            <div class="botones">
+                <input type="button" id="cliente-alta" onclick="cliente.alta()" value="Alta">
+                <input type="button" id="cliente-baja" onclick="cliente.baja()" value="Baja">
+                <input type="button" id="cliente-modificar" onclick="cliente.modificar()" value="Modificar">
+                <input type="reset">
+            </div>
+            <div class="lista">
+                <select id="cliente-lista" size="4" onclick="cliente.seleccionar()"></select>
+            </div>
+        </section>
+    </form>
+	
+</fieldset></center>
+</body>
+</html>
