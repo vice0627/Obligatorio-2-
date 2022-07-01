@@ -12,7 +12,11 @@
     <link rel="stylesheet" href="css/estilos.css">
 </head>
 
-<body>
+<body onload="vehiculo.inicializar()">
+    
+    <script src="js/objVehiculos.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="js/objMemoria.js"></script>
 
     <header>
 
@@ -53,36 +57,41 @@
                     <a href="pExtraInfo.html">
                         <input type="button" value="Leer Más">
                     </a>
+    
+  </button>
 
                 </div>
                 <div id="ingreso">
           
                    <h1>vehículos</h1>
                    <br><br>
+
     <hr>
-    <p>Marca:     <input class="barras" id="Marca"></p>
-    <p>Modelo: <input class="barras" id="Modelo"></p>
-    <p>Anio: <input class="barras" id="anio"></p>
-    <p>Precio: <input class="barras" id="precio"></p>
-    <p>Stock: <input class="barras" id="precio"></p>
-    <input name="modificado" type="checkbox" />Modificado
-    <input name="nuevo" type="checkbox" />Nuevo
+    <p>Id:     <input class="barras" id="vehiculo-id"></p>
+    <p>Marca:  <input class="barras" id="vehiculo-marca"></p>
+    <p>Modelo: <input class="barras" id="vehiculo-modelo"></p>
+    <p>Precio: <input class="barras" id="vehiculo-precio"></p>
+    <p>Stock:  <input class="barras" id="vehiculo-stock"></p>
+    <p>Modificado: <input type="checkbox" class="barras" id="vehiculo-modificado">Nuevo: <input type="checkbox" class="barras" id="vehiculo-nuevo"></p>
+  
     <hr>
-    <p><select size="6" onclick="articulo.seleccionar()" id="listaArticulos" class="lista"></select></p>    
+
+    <p><select id="vehiculo-lista" size="4" onclick="vehiculo.seleccionar()"></select></p>    
                 </div>
                 <div id="botones">
 
                     <div  id="alta">
-                        <input type="button" class="boton" value="Alta" id="vehiculos-alta" onclick="objVehiculos.alta()">
+                        <input type="button" class="boton" value="Alta" id="vehiculos-alta" onclick="vehiculo.alta()">
                     </div>
                     <div id="baja">
-                        <input type="button" class="boton" value="Baja" id="vehiculos-baja" onclick="objVehiculos.baja()">
+                        <input type="button" class="boton" value="Baja" id="vehiculos-baja" onclick="vehiculo.baja()">
                     </div>
                     <div id="modificar">
-                        <input type="button" class="boton" value="modificar" id="modificar" onclick="objVehiculos.modificar()">
+                        <input type="button" class="boton" value="modificar" id="modificar" onclick="vehiculo.modificar()">
                     </div>
                     <div id="reset">
-                        <input type="button" class="boton" value="reset" id="reset" onclick="objVehiculos.reset()">
+                        <input type="button" class="boton" value="reset" id="reset" onclick="vehiculo.reset()">
+                        
                     </div>
                     
                 </div>
@@ -93,7 +102,7 @@
         </div>
     </main>
 
-    <script src="js/objVehiculos.js"></script>
+
 </body>
 
 </html>

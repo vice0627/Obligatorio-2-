@@ -2,12 +2,13 @@ const vehiculo = {
 
     vehiculos: [],
 
-    crear: function (id, marca, modelo, aino, modificado, nuevo) {
+    crear: function (id, marca, modelo, precio, stock, modificado, nuevo) {
         return {
             Id: id,
             Marca: marca,
             Modelo: modelo,
-            Aino: aino,
+            Precio: precio,
+            Stock: stock,
             Modificado: modificado,
             Nuevo: nuevo
         };
@@ -20,13 +21,14 @@ const vehiculo = {
         } else {
             const marca = document.getElementById('vehiculo-marca').value;
             const modelo = document.getElementById("vehiculo-modelo").value;
-            const aino = document.getElementById("vehiculo-aino").value;
+            const precio = document.getElementById("vehiculo-precio").value;
+            const stock = document.getElementById("vehiculo-stock").value;
             const modificado = document.getElementById("vehiculo-modificado").value;
             const nuevo = document.getElementById("vehiculo-nuevo").value;
-            if(this.faltanDatos(id, marca, modelo, aino, modificado, nuevo)){
+            if(this.faltanDatos(id, marca, modelo, precio, stock, modificado, nuevo)){
 				alert('Error en alta: faltan datos.');
 			} else {
-				const objVehiculo = this.crear(id, marca, modelo, aino, modificado, nuevo);				
+				const objVehiculo = this.crear(id, marca, modelo, precio, stock, modificado, nuevo);				
 				this.vehiculos.push(objVehiculo);
 				this.listar();
 				this.reset();
@@ -59,7 +61,8 @@ const vehiculo = {
             const objVehiculo = this.vehiculos[posicion];
             objVehiculo.Marca = document.getElementById('vehiculo-marca').value;
             objVehiculo.Modelo = document.getElementById('vehiculo-modelo').value;
-            objVehiculo.Aino = document.getElementById('vehiculo-aino').value;
+            objVehiculo.Precio = document.getElementById('vehiculo-precio').value;
+            objVehiculo.Stock = document.getElementById('vehiculo-stock').value;
             objVehiculo.Modificado = document.getElementById('vehiculo-modificado').value;
             objVehiculo.Nuevo = document.getElementById('vehiculo-nuevo').value;
             this.listar();
@@ -73,7 +76,7 @@ const vehiculo = {
         lista.length = 0;
         for (const objVehiculo of this.vehiculos) {
             const texto = objVehiculo.Id + ': ' + objVehiculo.Marca + ': ' + objVehiculo.Modelo + ': ' +
-            objVehiculo.Aino + ': ' + objVehiculo.Modificado + ': ' + objVehiculo.Nuevo;
+            objVehiculo.Precio + ': ' + objVehiculo.Stock + ': ' + objVehiculo.Modificado + ': ' + objVehiculo.Nuevo;
             const elemento = new Option(texto);
             lista.add(elemento);
         }
@@ -88,7 +91,8 @@ const vehiculo = {
             document.getElementById('vehiculo-id').value = objVehiculo.Id;
             document.getElementById('vehiculo-marca').value = objVehiculo.Marca;
             document.getElementById('vehiculo-modelo').value = objVehiculo.Modelo;
-            document.getElementById('vehiculo-aino').value = objVehiculo.Aino;
+            document.getElementById('vehiculo-precio').value = objVehiculo.Precio;
+            document.getElementById('vehiculo-stock').value = objVehiculo.Stock;
             document.getElementById('vehiculo-modificado').value = objVehiculo.Modificado;
             document.getElementById('vehiculo-nuevo').value = objVehiculo.Nuevo
         }
@@ -109,15 +113,21 @@ const vehiculo = {
         this.listar();
     },
 	
-	faltanDatos: function (id, marca, modelo, aino, modificado, nuevo){
-	if(id == "" || modelo == "" || marca == "" || aino == "" || modificado == "" || nuevo == "")
+	faltanDatos: function (id, marca, modelo, precio, stock, modificado, nuevo){
+	if(id == "" || modelo == "" || marca == "" || precio == "" || stock == "" || modificado == "" || nuevo == "")
 		return true;
 	else
 		return false;
 	},
 	
     reset: function () {
-        document.getElementById('pVehiculos').reset();
+       document.getElementById("vehiculo-id").value = "";
+       document.getElementById("vehiculo-marca").value = "";
+       document.getElementById("vehiculo-modelo").value = "";
+       document.getElementById("vehiculo-precio").value = "";
+       document.getElementById("vehiculo-stock").value = "";
+       document.getElementById("vehiculo-modificado").prop('checked',true); 
+       document.getElementById("vehiculo-nuevo").prop('checked',true); 
     }
 	
 };
