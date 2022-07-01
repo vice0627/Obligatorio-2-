@@ -1,21 +1,19 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="images/loguito.png">
     <title>Beyond Reality Motors</title>
 
     <script src="https://kit.fontawesome.com/41bcea2ae3.js" crossorigin="anonymous"></script>
-
     <link rel="stylesheet" href="css/estilos.css">
 </head>
 
 <body onload="vehiculo.inicializar()">
     
     <script src="js/objVehiculos.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
     <script src="js/objMemoria.js"></script>
 
     <header>
@@ -77,7 +75,7 @@
     <hr>
 
     <p><select id="vehiculo-lista" size="4" onclick="vehiculo.seleccionar()"></select></p>    
-                </div>
+    </div>
                 <div id="botones">
 
                     <div  id="alta">
@@ -90,8 +88,7 @@
                         <input type="button" class="boton" value="modificar" id="modificar" onclick="vehiculo.modificar()">
                     </div>
                     <div id="reset">
-                        <input type="button" class="boton" value="reset" id="reset" onclick="vehiculo.reset()">
-                        
+                        <input type="button" class="boton" value="reset" id="reset" onclick="vehiculo.reset()">    
                     </div>
                     
                 </div>
@@ -101,8 +98,6 @@
         </div>
         </div>
     </main>
-
-
 </body>
 
 </html>

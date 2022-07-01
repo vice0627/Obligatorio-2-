@@ -126,8 +126,8 @@ const vehiculo = {
        document.getElementById("vehiculo-modelo").value = "";
        document.getElementById("vehiculo-precio").value = "";
        document.getElementById("vehiculo-stock").value = "";
-       document.getElementById("vehiculo-modificado").prop('checked',true); 
-       document.getElementById("vehiculo-nuevo").prop('checked',true); 
+       document.getElementById("vehiculo-modificado").checked = false;
+       document.getElementById("vehiculo-nuevo").checked = false;
     }
 	
 };

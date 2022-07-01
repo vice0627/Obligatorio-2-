@@ -10,7 +10,13 @@
     align-items:flex-start;
     margin-right: 20vh;
 }
-
+.botonesInferiores{
+    margin-left: 400px;
+   
+}
+.main{
+    margin-left: 50px;
+}
 #contacto{
     margin-top: 6%;
 }

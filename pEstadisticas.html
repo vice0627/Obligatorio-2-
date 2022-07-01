@@ -8,7 +8,7 @@
     <title>Beyond Reality Motors</title>
 
     <script src="https://kit.fontawesome.com/41bcea2ae3.js" crossorigin="anonymous"></script>
-
+    <script src="js/objEstadisticas.js"></script>
     <link rel="stylesheet" href="css/estilos.css">
 </head>
 <body>
@@ -41,25 +41,38 @@
     <main>
         <div class="container__cover">
             <div class="cover">
-                <div class="text">
-                    <h1>La automotora mas reconocida de Uruguay, innovando desde 1990</h1>
+                <div class="textoEstadisticas">
+                    <h1>Estadisticas</h1>
+                <div id="botones">
+                    <div id="baja">
+                        <input type="button" class="boton" value="Listar" id="vehiculos-baja" onclick="vehiculo.baja()">
+                    </div>
+                    <div id="modificar">
+                        <input type="button" class="boton" value="Más caro" id="modificar" onclick="vehiculo.modificar()">
+                    </div>
+                    <div id="reset">
+                        <input type="button" class="boton" value="Precio maximo" id="reset" onclick="vehiculo.reset()">    
+                    </div>
 
-                    <p>Líderes en la venta de vehículos nuevos y usados hace más de 20 años.Mas que un servicio
-                        somos una experiencia, no damos la posibilidad al cliente a quedar inconforme
-                    </p>
-                 <a href="pExtraInfo.html">
-                    <input type="button" value="Leer Más" >
-                 </a>
-                    
+                    </div>
+                    <div>
+                    <div id="baja">
+                        <input type="button" class="boton" value="Listar por marca" id="vehiculos-baja" onclick="vehiculo.baja()">
+                    </div>
+                    <div id="modificar">
+                        <input type="button" class="boton" value="Mayor vendedor" id="modificar" onclick="vehiculo.modificar()">
+                    </div>
+                    <div id="reset">
+                        <input type="button" class="boton" value="Buscar cliente" id="reset" onclick="vehiculo.reset()">    
+                    </div>
                 </div>
-
-                <div class="svg">
-                    <img src="images/developer_activityy.svg" alt="">
+                </div>
+                
+                <div class="info">
+                    
                 </div>
             </div>
         </div>
     </main>
-
-    <script src="js/objEstadisticas.js"></script>
 </body>
 </html>
