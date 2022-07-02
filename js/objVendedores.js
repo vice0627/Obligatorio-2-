@@ -2,12 +2,12 @@
 
     vendedores: [],
 
-    crear: function (id, nombre, edad, salario) {
+    crear: function (id, nombre, apellido, ventas) {
         return {
             Id: id,
             Nombre: nombre,
-            Edad: edad,
-            Salario: salario,
+            Apellido: apellido,
+            Ventas: ventas,
         };
     },
 //cosas que estan random  en medio del codigo porque puedo y quiero lol frescaso estoy
@@ -15,20 +15,20 @@
     alta: function () {
         const id = document.getElementById('vendedor-id').value;
         if (this.buscarPosicion(id) > -1) {
-            alert('Error en alta: repetido.');
+            swal('Error en alta: repetido.');
         } else {
             const nombre = document.getElementById('vendedor-nombre').value;
-            const edad = document.getElementById("vendedor-edad").value;
-            const salario = document.getElementById("vendedor-salario").value;
-            if(this.faltanDatos(id, nombre, edad, salario)){
-				alert('Error en alta: faltan datos.');
+            const apellido = document.getElementById("vendedor-apellido").value;
+            const ventas = document.getElementById("vendedor-nDeVentas").value;
+            if(this.faltanDatos(id, nombre, apellido, ventas)){
+				swal('Error en alta: faltan datos.');
 			} else {
-				const objVehiculo = this.crear(id, nombre, edad, salario);				
+				const objVehiculo = this.crear(id, nombre, apellido, ventas);				
 				this.vendedores.push(objVehiculo);
 				this.listar();
 				this.reset();
                 memoria.escribir('vendedores', this.vendedores);
-                alert('vendedor ingresado con exito');
+                swal('vendedor ingresado con exito');
            }
 		}
     },
@@ -37,13 +37,13 @@
         const id = document.getElementById('vendedor-id').value;
         const posicion = this.buscarPosicion(id);
         if (posicion < 0) {
-            alert('Error en baja: no existe.');
+            swal('Error en baja: no existe.');
         } else {
             this.vendedores.splice(posicion, 1);
             this.listar();
             this.reset();
             memoria.escribir('vendedores', this.vendedores);
-            alert('El vendedor a sido eliminado con exito');
+            swal('El vendedor a sido eliminado con exito');
         }
     },
 //que? pensaste que no habia otro comentario
@@ -51,12 +51,12 @@
         const id = document.getElementById('vendedor-id').value;
         const posicion = this.buscarPosicion(id);
         if (posicion < 0) {
-            alert('Error en modificar: no existe.');
+            swal('Error en modificar: no existe.');
         } else {
             const objVendedor = this.vendedores[posicion];
             objVendedor.Nombre = document.getElementById('vendedor-nombre').value;
-            objVendedor.Edad = document.getElementById('vendedor-edad').value;
-            objVendedor.Salario = document.getElementById('vendedor-salario').value;
+            objVendedor.Apellido = document.getElementById('vendedor-apellido').value;
+            objVendedor.Ventas = document.getElementById('vendedor-nDeVentas').value;
             this.listar();
             this.reset();
             memoria.escribir('vendedores', this.vendedores);
@@ -64,11 +64,11 @@
     },
 
     listar: function () {
-        const lista = document.getElementById('vendedor-lista').value;
+        const lista = document.getElementById('vendedor-lista').options;
         lista.length = 0;
         for (const objVendedor of this.vendedores) {
-            const texto = objVendedor.Id + ': ' + objVendedor.Nombre + ': ' + objVendedor.Edad + ': ' +
-            objVendedor.Salario;
+            const texto = objVendedor.Id + ': ' + objVendedor.Nombre + ': ' + objVendedor.Apellido + ': ' +
+            objVendedor.Ventas;
             const elemento = new Option(texto);
             lista.add(elemento);
         }
@@ -77,13 +77,13 @@
     seleccionar: function(){
         const posicion = document.getElementById('vendedor-lista').selectedIndex;
         if (posicion < 0) {
-            alert('Error en seleccionar.');
+            swal('Error en seleccionar.');
         } else {
             const objVendedor = this.vendedores[posicion];
             document.getElementById('vendedor-id').value = objVendedor.Id;
             document.getElementById('vendedor-nombre').value = objVendedor.Nombre;
-            document.getElementById('vendedor-edad').value = objVendedor.Edad;
-            document.getElementById('vendedor-salario').value = objVendedor.Salario;
+            document.getElementById('vendedor-apellido').value = objVendedor.Apellido;
+            document.getElementById('vendedor-nDeVentas').value = objVendedor.Ventas;
         }
     },
 
@@ -102,15 +102,17 @@
         this.listar();
     },
 	
-	faltanDatos: function (id, nombre, edad, salario){
-	if(id == "" || edad == "" || nombre == "" || salario == "")
+	faltanDatos: function (id, nombre, apellido, ventas){
+	if(id == "" || apellido == "" || nombre == "" || ventas == "")
 		return true;
 	else
 		return false;
 	},
 	
     reset: function () {
-        document.getElementById('pVendedores').reset();
+       document.getElementById("vendedor-id").value = "";
+       document.getElementById("vendedor-nombre").value = "";
+       document.getElementById("vendedor-apellido").value = "";
+       document.getElementById("vendedor-nDeVentas").value = "";
     }
-	
 };

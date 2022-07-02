@@ -9,9 +9,16 @@
 
     <script src="https://kit.fontawesome.com/41bcea2ae3.js" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="css/estilos.css">
-</head>
-<body>
+
+    <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+    <script src="js/sweetAlert.js"></script>
     
+</head>
+<body onload="vendedor.inicializar()">
+    
+    <script src="js/objVendedores.js"></script>
+    <script src="js/objMemoria.js"></script>
+
     <header>
 
         <div class="container__menu">
@@ -52,31 +59,33 @@
                     <a href="pExtraInfo.html">
                         <input type="button" value="Leer Más">
                     </a>
-
+                    
                 </div>
                 <div id="ingreso">
                   
                     <h1>Vendedores</h1>
                     <br><br>
                     <hr>
-                    <p>Nombre:     <input class="barras" id="Marca"></p>
-                    <p>Apellido: <input class="barras" id="Modelo"></p>
-                    <p>N de ventas: <input class="barras" id="Precio"></p>
+                    <p>Id:   <input class="barras" id="vendedor-id"></p>
+                    <p>Nombre:   <input class="barras" id="vendedor-nombre"></p>
+                    <p>Apellido: <input class="barras" id="vendedor-apellido"></p>
+                    <p>N de ventas: <input class="barras" id="vendedor-nDeVentas"></p>
                     <hr>
+                    <p><select class="listas" id="vendedor-lista" size="4" onclick="vendedor.seleccionar()"></select></p>
                 </div>
                 <div id="botones">
 
                     <div  id="alta">
-                        <input type="button" class="boton" value="Alta" id="vendedores-alta" onclick="objVendedores.alta()">
+                        <input type="button" class="boton" value="Alta" id="vendedores-alta" onclick="vendedor.alta()">
                     </div>
                     <div id="baja">
-                        <input type="button" class="boton" value="Baja" id="vendedores-baja" onclick="objVendedores.baja()">
+                        <input type="button" class="boton" value="Baja" id="vendedores-baja" onclick="vendedor.baja()">
                     </div>
                     <div id="modificar">
-                        <input type="button" class="boton" value="modificar" id="modificar" onclick="objVendedores.modificar()">
+                        <input type="button" class="boton" value="modificar" id="modificar" onclick="vendedor.modificar()">
                     </div>
                     <div id="reset">
-                        <input type="button" class="boton" value="reset" id="reset" onclick="objVendedores.reset()">
+                        <input type="button" class="boton" value="reset" id="reset" onclick="vendedor.reset()">
                     </div>
                     
                 </div>
@@ -87,7 +96,6 @@
         </div>
     </main>
 
-    <script src="js/objVendedores.js"></script>
 </body>
 
 </html>

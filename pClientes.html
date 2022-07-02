@@ -9,6 +9,9 @@
 
     <script src="https://kit.fontawesome.com/41bcea2ae3.js" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="css/estilos.css">
+
+    <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+    <script src="js/sweetAlert.js"></script>
 </head>
 
 <body onload="cliente.inicializar()">
@@ -64,11 +67,13 @@
                     <br><br>
 
     <hr>
-    <p>Nombre:  <input class="barras" id="Marca"></p>
-    <p>Apellido: <input class="barras" id="Modelo"></p>
+    <p>Id:  <input class="barras" id="cliente-id"></p>
+    <p>Nombre:  <input class="barras" id="cliente-nombre"></p>
+    <p>Apellido: <input class="barras" id="cliente-apellido"></p>
+    <p>Localidad:  <input class="barras" id="cliente-localidad"></p>
     <hr>
 
-    <p><select id="cliente-lista" size="4" onclick="cliente.seleccionar()"></select></p>
+    <p><select class="listas" id="cliente-lista" size="4" onclick="cliente.seleccionar()"></select></p>
     </div>
                 <div id="botones">
 
@@ -76,7 +81,7 @@
                         <input type="button" class="boton" value="Alta" id="clientes-alta" onclick="cliente.alta()">
                     </div>
                     <div id="baja">
-                        <input type="button" class="boton" value="Baja" id="clientes-baja" onclick="objClientes.baja()">
+                        <input type="button" class="boton" value="Baja" id="clientes-baja" onclick="cliente.baja()">
                     </div>
                     <div id="modificar">
                         <input type="button" class="boton" value="modificar" id="modificar" onclick="cliente.modificar()">

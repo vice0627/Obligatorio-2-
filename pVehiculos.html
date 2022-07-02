@@ -9,6 +9,9 @@
 
     <script src="https://kit.fontawesome.com/41bcea2ae3.js" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="css/estilos.css">
+
+    <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+    <script src="js/sweetAlert.js"></script>
 </head>
 
 <body onload="vehiculo.inicializar()">
@@ -65,7 +68,7 @@
                    <br><br>
 
     <hr>
-    <p>Id:     <input class="barras" id="vehiculo-id"></p>
+    <p>Id:  <input class="barras" id="vehiculo-id"></p>
     <p>Marca:  <input class="barras" id="vehiculo-marca"></p>
     <p>Modelo: <input class="barras" id="vehiculo-modelo"></p>
     <p>Precio: <input class="barras" id="vehiculo-precio"></p>
@@ -74,7 +77,7 @@
   
     <hr>
 
-    <p><select id="vehiculo-lista" size="4" onclick="vehiculo.seleccionar()"></select></p>    
+    <p><select class="listas" id="vehiculo-lista" size="4" onclick="vehiculo.seleccionar()"></select></p>    
     </div>
                 <div id="botones">
 
