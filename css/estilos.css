@@ -18,6 +18,12 @@ select.listas{
     min-width: 400px;
     background-color: rgb(187, 90, 90);
 }
+select.listaEstadisticas{
+    margin-top: 75px;
+    min-width: 800px;
+    min-height: 500px;
+    background-color: rgb(187, 90, 90);
+}
 .main{
     margin-left: 50px;
 }
@@ -306,6 +312,9 @@ body::-webkit-scrollbar{
     width:0.35vw;
   }
   select.listas::-webkit-scrollbar{
+    width:0.35vw;
+  }
+  select.listaEstadisticas::-webkit-scrollbar{
     width:0.35vw;
   }
   body::-webkit-scrollbar-thumb{

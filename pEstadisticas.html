@@ -8,8 +8,11 @@
     <title>Beyond Reality Motors</title>
 
     <script src="https://kit.fontawesome.com/41bcea2ae3.js" crossorigin="anonymous"></script>
+    <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
     <script src="js/objEstadisticas.js"></script>
+    <script src="js/objVehiculos.js"></script>
     <link rel="stylesheet" href="css/estilos.css">
+    <script src="js/objMemoria.js"></script>
 </head>
 <body>
     
@@ -44,11 +47,11 @@
                 <div class="textoEstadisticas">
                     <h1>Estadisticas</h1>
                 <div id="botones">
-                    <div id="baja">
-                        <input type="button" class="boton" value="Listar" id="vehiculos-baja" onclick="vehiculo.baja()">
+                    <div id="listar">
+                        <input type="button" class="boton" value="Listar" id="listar" onclick="estadistica.listar()">
                     </div>
-                    <div id="modificar">
-                        <input type="button" class="boton" value="Más caro" id="modificar" onclick="vehiculo.modificar()">
+                    <div id="masCaro">
+                        <input type="button" class="boton" value="Más caro" id="masCaro" onclick="estadistica.masCaro()">
                     </div>
                     <div id="reset">
                         <input type="button" class="boton" value="Precio maximo" id="reset" onclick="vehiculo.reset()">    
@@ -60,16 +63,16 @@
                         <input type="button" class="boton" value="Listar por marca" id="vehiculos-baja" onclick="vehiculo.baja()">
                     </div>
                     <div id="modificar">
-                        <input type="button" class="boton" value="Mayor vendedor" id="modificar" onclick="vehiculo.modificar()">
+                        <input type="button" class="boton" value="Mayor vendedor" id="modificar" onclick="estadistica.mayorVendedor()">
                     </div>
                     <div id="reset">
-                        <input type="button" class="boton" value="Buscar cliente" id="reset" onclick="vehiculo.reset()">    
+                        <input type="button" class="boton" value="Buscar cliente" id="reset" onclick="estadistica.buscarCliente()">    
                     </div>
                 </div>
                 </div>
                 
                 <div class="info">
-                    
+                    <select class="listaEstadisticas" id="estadisticas-lista" size="4"></select>
                 </div>
             </div>
         </div>

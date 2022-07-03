@@ -1,5 +1,3 @@
-var vehiculoId = 1;
-
 const vehiculo = {
 
     vehiculos: [],
@@ -29,16 +27,16 @@ const vehiculo = {
             let nuevo = false;
 
             if(document.getElementById('vehiculo-modificado').checked == true){
-                modificado =true;
+                modificado = "modificado";
             }
             else if(document.getElementById('vehiculo-modificado').checked == false){
-                modificado = false;
+                modificado = "No_modificado";
             }
             if(document.getElementById('vehiculo-nuevo').checked == true){
-                nuevo = true;
+                nuevo = "nuevo";
             }
             else if(document.getElementById('vehiculo-nuevo').checked == false){
-                nuevo = false;
+                nuevo = "usado";
             }
 
             if(this.faltanDatos(id, marca, modelo, precio, stock, modificado, nuevo)){
