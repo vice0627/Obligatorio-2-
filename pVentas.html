@@ -13,8 +13,10 @@
 
     <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
     <script src="js/sweetAlert.js"></script>
+    <script src="js/objMemoria.js"></script>
+    <script src="js/objVentas.js"></script>
 </head>
-<body>
+<body onload="venta.inicializar()">
     
     <header>
 
@@ -44,17 +46,27 @@
     <main>
         <div class="container__cover">
             <div class="cover">
-                <div class="text ">
-                    <h1>Datos de ventas</h1>
-
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Iure voluptates
-                     iusto velit dicta nulla nostrum quidem neque. Asperiores earum veniam nisi nobis et officia odit minima illum perferendis placeat! Ullam.
-                    </p>
-
-                    <a href="pExtraInfo.html">
-                        <input type="button" value="Leer Más">
-                    </a>
-
+                <div class="textVentas">
+                    <form id="ventas">                   
+    <h1 style="padding-left: 244px;">Ventas</h1>
+    <hr>
+    <br>
+    <p>Id:        <input id="id" type="text"></p>
+    <p>Fecha:     <input class="boton" type="date" id="fecha" type="date"></p>
+    <p>Cliente:   <select class="boton" type="text" id="clientes"></select> Vendedores: <select class="boton" id="vendedoresVenta"></select></p>
+    <p>Vehiculos: <select class="boton" type="text" id="vehiculosEnVenta"></select></p>
+    <p><input class="boton" type="reset" type="text" value="Reset"></p>
+    <br>
+    <hr>
+    <p>
+        <input class="boton" type="button" value="Alta" onclick="venta.alta()">
+        <input class="boton" type="button" value="Baja" onclick="venta.baja()">
+        <input class="boton" type="button" value="Modificar" onclick="venta.modificar()">
+    </p>
+    <br>
+    <p>Lista de ventas:</p>
+    <p><select class="listaDVentas" size="6" onclick="venta.seleccionar()" id="listaVentas" class="lista"></select></p>
+                    </form>
                 </div>
             </div>
         </div>
@@ -62,7 +74,7 @@
         </div>
     </main>
 
-    <script src="js/objVentas.js"></script>
+
 </body>
 
 </html>
