@@ -11,18 +11,19 @@
     margin-right: 20vh;
 }
 .botonesInferiores{
-    margin-left: 400px;
+    margin-left: 21vw;
    
 }
 select.listas{
-    min-width: 400px;
+    min-width: 21vw;
     background-color: rgb(187, 90, 90);
 }
 select.listaEstadisticas{
-    margin-top: 75px;
-    min-width: 800px;
-    min-height: 500px;
+    margin-top: 3vw;
+    min-width: 42vw;
+    min-height: 30vw;
     background-color: rgb(187, 90, 90);
+    border-radius: 0.4vw;
 }
 .main{
     margin-left: 50px;
@@ -32,26 +33,26 @@ select.listaEstadisticas{
 }
 #listaVentas.listaDVentas{
     background-color: #e84c46;
-    min-width: 600px;
+    min-width: 32vw;
 }
 .ingreso{
     align-items: center;
-    max-width: 300px;
+    max-width: 17vw;
     min-width: 40%;
     margin-right: 33%;
     margin-left: 33%;
 }
 header{
     width: 100%;
-    height: 80px;
-    margin-top: 40px;
+    height: 4vw;
+    margin-top: 3vw;
     position: fixed;
     z-index: 1;
-    padding: 40px;
+    padding: 2vw;
     margin-left: 0%;
 }
 .container__menu{
-    max-width: 1200px;
+    max-width: 50vw;
     height: 100%;
     margin: auto;
     display: flex;
@@ -62,10 +63,11 @@ header{
     height: 100%;
     display: flex;
     align-items: center;
+    margin-top: 0vw;
 }
 
 .logo img{
-    width: 60px;
+    width: 3vw;
 
 }
 .menu{
@@ -78,34 +80,34 @@ header{
 }
 .menu ul li{
     list-style: none;
-    margin-left: 36px;
+    margin-left: 2vw;
 }
 #tablaVentas{
-    max-width: 100px;
-    max-height: 100px;
+    max-width: 40vw;
+    max-height: 40vw;
 }
 .textVentas{
- align-items: center;
- max-height: 1000px;
- margin-top: 200px;
- margin-left: 30px;
- background-color: #ff08008c;
- border-radius: 5px;
- padding-left: 20px;
- padding-right: 20px;
- padding-bottom: 20px;
-}
+    align-items: center;
+    max-height: 400vw;
+    margin-top: 11vw;
+    margin-left: 30px;
+    background-color: #ff08008c;
+    border-radius: 0.4vw;
+    padding-left: 1vw;
+    padding-right: 1vw;
+    padding-bottom: 1vw;
+   }
 .menu ul li a{
     text-decoration: none;
-    font-size: 16px;
+    font-size: 0.85vw;
     color: #fff;
     text-transform: uppercase;
 }
 
 #selected{
     background: #e84c46;
-    padding: 10px 40px;
-    border-radius: 50px;
+    padding: 0.4vw 2vw;
+    border-radius: 4vw;
 }
 
 .menu nav img{
@@ -119,25 +121,25 @@ header{
 
 /*COVER*/
 .botones{
-    border-radius: 5px;
+    border-radius: 0.4vw;
     align-items: flex-end;
-    width: 200px;
-    height: 80px;
+    width: 40vw;
+    height: 8vw;
     justify-content: right;
 }
 
 .container__cover{
     width: 100%;
-    height: 800px;
+    height: 46vw;
     background-image: url(../images/Background-page.svg);
     background-position: right;
     background-repeat: no-repeat;
-    padding: 40px;
+    padding: 4vw;
     align-items: center;
 }
 
 .cover{
-    max-width: 1800px;
+    max-width: 720vw;
     height: 100%;
     display: flex;
     align-items: center;
@@ -153,19 +155,18 @@ header{
 }
 
 .container__cover .text{
-    max-width: 300px;
+    max-width: 35vw;
     min-width: 40%;
     margin-right: 5%;
 }
 
 .container__cover .text h1{
-    font-size: 36px;
-    font-weight: 600;
+    font-size: 2.2vw;
 }
 
 .container__cover .text p{
-    font-size: 18px;
-    margin-top: 40px;
+    font-size: 0.72vw;
+    margin-top: 1.6vw;
 }
 
 .container__cover .text input{
