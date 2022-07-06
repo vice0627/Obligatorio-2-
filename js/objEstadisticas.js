@@ -1,49 +1,10 @@
+
 const estadistica = {
-  /*bubbleSort: function(items) {
-    var length = items.length;  
-    for (var i = 0; i < length; i++) { 
-          for (var j = 0; j < (length - i - 1); j++) { 
-                   if(items[j] > items[j+1]) {
-                           var tmp = items[j]; 
-                items[j] = items[j+1]; 
-                items[j+1] = tmp; 
-            }
-        }        
-    }
-},
-  listar: function () {
-    const lista = document.getElementById('estadisticas-lista').options;
-    lista.length = 0;
-    for (const objEstadisticas of this.estadisticas) {
-        const texto = this.bubbleSort(vehiculos.Marca);
-        const elemento = new Option(texto);
-        lista.add(elemento);
-    }
-},*/
+  vehiculosLista: [],
   listar: function(){
-   let clon = memoria.leer('vehiculos');
-   let marcas = [];
-   let indice = 0;
-   let clonOrdenado = clon;
-   let marcasOrdenadas = [];
-
-   for(let i = 0;i < clon.length;i++){
-    marcas[i] = clon[i].Marca;
-   }
-
-   marcasOrdenadas = marcas;
-   marcasOrdenadas.sort();
-
-   for(let i = 0;i < clon.length;i++){
-    marcas[i] = clon[i].Marca;
-   }
-//------------------------------------------------------
-   for(let j = 0;j < clon.length;j++){
-    indice = marcas.indexOf(marcasOrdenadas,j);
-    clonOrdenado[j] = clon[indice];
-   }
-swal('Encontramos un bug en js')
+   
   },
+  
   masCaro: function(){
       
     let clon = memoria.leer('vehiculos');
@@ -59,31 +20,51 @@ swal('Encontramos un bug en js')
      
     swal("Marca: " + clon[indice].Marca + "\nModelo: " + clon[indice].Modelo+ "\nPrecio: " + clon[indice].Precio);
   },
-  
+
     precioMaximo: function(){
 
+      let precio = prompt("Ingrese el precio por el que quiere filtrar los vehiculos.");
+      let clonVehiculos = memoria.leer('vehiculos');
+      let largo = clonVehiculos.length;
+      
+      for(let i = 0;i < largo;i++){
+      let x = parseInt(clonVehiculos[i].Precio);
+        if( x > precio){
+          clonVehiculos.splice(i,1);
+        }
+      }
+      this.vehiculosLista = clonVehiculos;
+      this.listarPMaximo();
     },
-    listarMarcas: function(){
+
+    listarPMaximo: function(){
+
+      const lista = document.getElementById('listaEstadisticas1').options;
+        lista.length = 0;
+
+        for (const vehiculo of this.vehiculosLista) {
+            
+            const texto = "Id : " + vehiculo.Id + ' |Marca : ' + vehiculo.Marca  + ' |Modelo : ' +
+           vehiculo.Modelo + " |Precio : " + vehiculo.Precio;
+
+            const elemento = new Option(texto);
+            lista.add(elemento);
+        }
 
     },
     mayorVendedor: function(){
       
     },
     buscarCliente: function(){
-      let clon = memoria.leer('clientes');
-      let nombre = prompt("ingrese el nombre del cliente");
-      let indice = 0;
-      let nombres = [];
- 
-      for(let i = 0;i < clon.length;i++){
-        nombres[i] = clon[i].Nombre;
+
+      const cliente = prompt("Ingrese el apellido y después el nombre del cliente para buscar que vehículo compró.");
+      let ventas = memoria.leer('ventas');
+       
+      for(let i = 0; i < ventas.length;i++){
+        if(ventas[i].Cliente == cliente){
+          swal("El vehículo que compró " + cliente + " es un : " + ventas[i].Vehiculo);
+        }
       }
-      indice = nombres.indexOf(nombre);
-      swal(clon[indice].Nombre + " compró un auto de marca " + clon[indice].M)
-
     },
-    ordenar: function(a, b){
 
-        return a - b;
-    }
 };

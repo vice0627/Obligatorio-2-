@@ -25,9 +25,23 @@ select.listas{
     min-width: 21vw;
     background-color: rgb(187, 90, 90);
 }
-select.listaEstadisticas{
+select.listaEstadisticas1{
     margin-top: 3vw;
-    min-width: 42vw;
+    min-width: 14vw;
+    min-height: 30vw;
+    background-color: rgb(187, 90, 90);
+    border-radius: 0.4vw;
+}
+select.listaEstadisticas2{
+    margin-top: 3vw;
+    min-width: 14vw;
+    min-height: 30vw;
+    background-color: rgb(187, 90, 90);
+    border-radius: 0.4vw;
+}
+select.listaEstadisticas3{
+    margin-top: 3vw;
+    min-width: 14vw;
     min-height: 30vw;
     background-color: rgb(187, 90, 90);
     border-radius: 0.4vw;
@@ -352,7 +366,13 @@ body::-webkit-scrollbar{
   select.listas::-webkit-scrollbar{
     width:0.35vw;
   }
-  select.listaEstadisticas::-webkit-scrollbar{
+  select.listaEstadisticas1::-webkit-scrollbar{
+    width:0.35vw;
+  }
+  select.listaEstadisticas2::-webkit-scrollbar{
+    width:0.35vw;
+  }
+  select.listaEstadisticas3::-webkit-scrollbar{
     width:0.35vw;
   }
   select#listaVentas.listaDVentas::-webkit-scrollbar{

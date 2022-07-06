@@ -11,6 +11,7 @@
     <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
     <script src="js/objEstadisticas.js"></script>
     <script src="js/objVehiculos.js"></script>
+    <script src="js/objVentas.js"></script>
     <link rel="stylesheet" href="css/estilos.css">
     <script src="js/objMemoria.js"></script>
 </head>
@@ -53,14 +54,14 @@
                     <div id="masCaro">
                         <input type="button" class="boton" value="Más caro" id="masCaro" onclick="estadistica.masCaro()">
                     </div>
-                    <div id="reset">
-                        <input type="button" class="boton" value="Precio maximo" id="reset" onclick="vehiculo.reset()">    
+                    <div id="precioMaximo">
+                        <input type="button" class="boton" value="Filtro por precio maximo" id="precioMaximo" onclick="estadistica.precioMaximo()">    
                     </div>
 
                     </div>
                     <div>
                     <div id="baja">
-                        <input type="button" class="boton" value="Listar por marca" id="vehiculos-baja" onclick="vehiculo.baja()">
+                        <input type="button" class="boton" value="Listar por marca" id="vehiculos-baja" onclick="estadistica.baja()">
                     </div>
                     <div id="modificar">
                         <input type="button" class="boton" value="Mayor vendedor" id="modificar" onclick="estadistica.mayorVendedor()">
@@ -72,7 +73,9 @@
                 </div>
                 
                 <div class="info">
-                    <select class="listaEstadisticas" id="estadisticas-lista" size="4"></select>
+                    <select class="listaEstadisticas1" id="listaEstadisticas1" size="4"></select>
+                    <select class="listaEstadisticas2" id="estadisticas-lista" size="4"></select>
+                    <select class="listaEstadisticas3" id="estadisticas-lista" size="4"></select>
                 </div>
             </div>
         </div>
