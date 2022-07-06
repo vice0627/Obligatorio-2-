@@ -91,14 +91,16 @@ else{
         return -1;
     },
     listar: function(){
-
+        
         const lista = document.getElementById('listaVentas').options;
         lista.length = 0;
+        vehiculo = document.getElementById("vehiculosEnVenta").value;
+
         for (const venta of this.ventas) {
-            const vehiculo = document.getElementById("vehiculosEnVenta").value;
-            const marcaymodelo = vehiculo.split(" ");
+            
             const texto = "Id : " + venta.Id + ' |Fecha : ' + venta.Fecha  + ' |Cliente : ' +
-            venta.Cliente + ' |Vendedor : ' + venta.Vendedor + " |Marca : " + marcaymodelo[0] + " |Modelo : " + marcaymodelo[1];
+            venta.Cliente + ' |Vendedor : ' + venta.Vendedor + " |Marca y modelo : " + venta.Vehiculo;
+
             const elemento = new Option(texto);
             lista.add(elemento);
         }
@@ -154,13 +156,13 @@ else{
            swal('Error en seleccionar');
         }
         else{
-          const objVentas = this.ventas[posicion];
+          const venta = this.ventas[posicion];
 
-          document.getElementById('id').value = objVentas.Id;
-          document.getElementById('fecha').value = objVentas.Fecha;
-          document.getElementById('cliente').value = objVentas.Cliente;
-          document.getElementById('vendedor').value = objVentas.Vendedor;
-          document.getElementById('vehiculo').value = objVentas.Vehiculo;
+          document.getElementById('id').value = venta.Id;
+          document.getElementById('fecha').value = venta.Fecha;
+          document.getElementById('cliente').value = venta.Cliente;
+          document.getElementById('vendedor').value = venta.Vendedor;
+          document.getElementById('vehiculo').value = venta.Vehiculo;
         }
      }
 };
