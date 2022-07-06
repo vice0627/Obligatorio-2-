@@ -177,7 +177,9 @@ header{
     display: flex;
     align-items: center;
 }
-
+.extraInfo{
+    align-content: center;
+}
 .container__cover .text{
     max-width: 35vw;
     min-width: 40%;
@@ -189,7 +191,7 @@ header{
 }
 
 .container__cover .text p{
-    font-size: 0.72vw;
+    font-size: 0.865vw;
     margin-top: 1.6vw;
 }
 
