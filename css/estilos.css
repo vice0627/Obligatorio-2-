@@ -94,11 +94,12 @@ header{
     max-height: 40vw;
 }
 .textVentas{
+    
     align-items: center;
     align-content: center;
     max-height: 120%;
     max-width: 100%;
-    margin-top: 10%;
+    margin-top: 30%;
     margin-left: 30px;
     background-color: #ff08008c;
     border-radius: 0.4vw;
