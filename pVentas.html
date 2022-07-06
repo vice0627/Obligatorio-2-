@@ -46,26 +46,28 @@
     <main>
         <div class="container__cover">
             <div class="cover">
-                <div class="textVentas">
-                    <form id="ventas">                   
-    <h1 style="padding-left: 244px;">Ventas</h1>
+                <div>
+                    <form>      
+    <div class="textVentas" id="ventas">             
+    <h1 style="padding-left: 40%;">Ventas</h1>
     <hr>
     <br>
     <p>Id:        <input id="id" type="text"></p>
-    <p>Fecha:     <input class="boton" type="date" id="fecha" type="date"></p>
-    <p>Cliente:   <select class="boton" type="text" id="clientes"></select> Vendedores: <select class="boton" id="vendedoresVenta"></select></p>
-    <p>Vehiculos: <select class="boton" type="text" id="vehiculosEnVenta"></select></p>
-    <p><input class="boton" type="reset" type="text" value="Reset"></p>
+    <p>Fecha:     <input class="botonVentas" type="date" id="fecha" type="date"></p>
+    <p>Cliente:   <select class="botonVentas" type="text" id="clientes"></select> Vendedores: <select class="botonVentas" id="vendedoresVenta"></select></p>
+    <p>Vehiculos: <select class="botonVentas" type="text" id="vehiculosEnVenta"></select></p>
+    <p><input class="botonVentas" type="reset" type="text" value="Reset"></p>
     <br>
     <hr>
     <p>
-        <input class="boton" type="button" value="Alta" onclick="venta.alta()">
-        <input class="boton" type="button" value="Baja" onclick="venta.baja()">
-        <input class="boton" type="button" value="Modificar" onclick="venta.modificar()">
+        <input class="botonVentas" type="button" value="Alta" onclick="venta.alta()">
+        <input class="botonVentas" type="button" value="Baja" onclick="venta.baja()">
+        <input class="botonVentas" type="button" value="Modificar" onclick="venta.modificar()">
     </p>
     <br>
     <p>Lista de ventas:</p>
     <p><select class="listaDVentas" size="6" onclick="venta.seleccionar()" id="listaVentas" class="lista"></select></p>
+    </div>
                     </form>
                 </div>
             </div>
